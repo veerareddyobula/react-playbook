@@ -3,10 +3,16 @@
   "version": "0.1.1",
   "private": false,
   "dependencies": {
+    "@storybook/addon-info": "^5.1.11",
     "@storybook/addon-knobs": "^5.1.11",
+    "@storybook/addon-options": "^5.1.11",
+    "@storybook/addon-storysource": "^5.1.11",
+    "bootstrap": "^4.3.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.1.1",
+    "styled-components": "^4.3.2",
+    "styled-system": "^5.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,6 +40,7 @@
   "devDependencies": {
     "@storybook/addon-actions": "^5.1.11",
     "@storybook/addon-links": "^5.1.11",
+    "@storybook/addon-storyshots": "^5.1.11",
     "@storybook/addons": "^5.1.11",
     "@storybook/react": "^5.1.11",
     "lerna": "^3.16.4"
