@@ -1,23 +1,16 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-
+import StoryContainer from '../../story-container/storyContainer';
 import HomeLogo from './homeLogo';
 
 storiesOf('Logo', module)
-.add(
-  'Home Logo',
-  withInfo({
-    styles: {
-      header: {
-        h1: {
-          color: 'red'
-        }
-      }
-    },
+  .addDecorator(StoryContainer)
+  .addDecorator(withInfo({
     text: 'String or React Element with docs about my component',
-  })(() =>
-    <HomeLogo />
-  ),
-  { notes: 'A very simple component' }
-);
+  }))
+  .add(
+    'Home Logo',
+    () =>
+      <HomeLogo />
+  );

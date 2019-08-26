@@ -1,14 +1,18 @@
 import { configure } from '@storybook/react';
-import { setDefaults } from '@storybook/addon-info';
+import { withInfo } from '@storybook/addon-info';
+import 'bootstrap/dist/css/bootstrap.css';
+import '@fortawesome/fontawesome-pro/css/all.min.css';
+import $ from 'jquery';
 
-const req = require.context('../src/components', true, /\.stories\.js$/);
+window.$ = $;
+const req = require.context('../src', true, /\.stories\.js$/);
 
 function loadStories() {
   // require('../src/stories');
   req.keys().forEach(filename => req(filename));
 }
 
-setDefaults({
+withInfo({
   header: false, // Toggles display of header with component name and description
 });
 

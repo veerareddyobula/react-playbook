@@ -7,16 +7,18 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import classNames from 'classnames';
-import 'bootstrap/dist/css/bootstrap.min.css'
+import {Btn} from './button.theme.js';
 
-const Button = ({
-    className,
-    ...other
-}) => {
+const Button = (props) => {
     return (
-        <button className="btn" {...other}>Log In</button>
+        <Btn {...props}>
+            {props.children}
+        </Btn>
     )
 };
+
+Button.propTypes = {
+    children: PropTypes.node
+}
 
 export default Button;
