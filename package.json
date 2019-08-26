@@ -1,6 +1,6 @@
 {
   "name": "react-playbook",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": false,
   "dependencies": {
     "@fortawesome/fontawesome-pro": "^5.10.2",
